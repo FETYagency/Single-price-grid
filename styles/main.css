@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+/* storing variables */
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+main{
+    min-height: 100vh;
+    background-color: var(--LightGray);
+    display: flex;
+    align-items: center;
+    padding: 4rem 0 ;
+}
+
+/* container sizes */
+@media (max-width:600px) {
+    .container{
+       width: min(370px, 100%);
+        margin: auto;
+    }
+}
+@media (min-width:600px) {
+    .container{
+       width: min(600px, 100%);
+        margin: auto;
+    }
+}
+@media (min-width:900px) {
+    .container{
+       width: min(950px, 100%);
+        margin: auto;
+    }
+}
+
+/* mobile design */
+
+.infoPart{
+    background-color: white;
+    padding: 2.5rem 2rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.infoPart>article>h1{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--Cyan);
+}
+.infoPart>article>h4{
+    font-weight: 700;
+    color: var(--BrightYellow);
+    margin: 1.3rem 0;
+    line-height: 1.4;
+}
+.infoPart>article>p{
+    color: var(--GrayishBlue);
+    line-height: 1.7;
+}
+
+
+
+
+.ctaPart{
+    background-color: var(--Cyan);
+    mix-blend-mode: multiply;
+    padding: 2.5rem 2rem;
+}
+.ctaPart>h1{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700
+}
+
+.ctaPart>.offer{
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+.ctaPart>.offer>.priceDetails{
+    display: flex;
+    align-items: center;
+}
+.ctaPart>.offer>.priceDetails>p{
+    display: inline-block;
+    color: white;
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+.ctaPart>.offer>.priceDetails>span{
+    font-size: 1rem;
+    margin-left: .9rem;
+    font-weight: 400;
+    color: var(--LightGray);
+}
+
+.ctaPart>.offer>p{
+    color: white;
+}
+.ctaPart>button{
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: var(--BrightYellow);
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+
+
+.whyUsPart{
+    background-color: var(--Cyan);
+    padding: 2.5rem 2rem;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.whyUsPart>article>h1{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.whyUsPart>article>p{
+    line-height: 1.6;
+    width: min(230px, 100% );
+    color: var(--LightGray);
+}
+
+/* desktop design */
+@media (min-width:900px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 
+        "spanAll spanAll"
+        "leftPart rightPart"
+        ;
+    }
+    .infoPart{
+        grid-area:spanAll;
+    }
+    .infoPart>article>h1{
+        font-size: 1.6rem;
+    }
+    .infoPart>article>h4{
+        font-size: 1.3rem;
+    }
+    .infoPart>article>p{
+        font-size: 1.2rem;
+        width: min(700px,100%);
+    }
+
+
+
+    .ctaPart{
+        grid-area: leftPart;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom-left-radius: 10px;
+    }
+    .ctaPart>h1{
+        font-size: 1.6rem;
+    }
+    .ctaPart>.offer>.priceDetails>p{
+        font-size: 2.5rem;
+    }
+    .ctaPart>.offer>.priceDetails>span{
+        font-size: 1.25rem;
+    }
+    .ctaPart>.offer>p{
+        font-size: 1.2rem;
+    }
+    .ctaPart>button{
+        padding: 1.3rem;
+    }
+
+    .whyUsPart{
+        grid-area: rightPart;
+        border-bottom-left-radius: 0px;
+    }
+    .whyUsPart>article>h1{
+        font-size: 1.6rem;
+    }
+    .whyUsPart>article>p{
+        width: min(300px, 100%);
+       font-size: 1.2rem;
+    }
+}
